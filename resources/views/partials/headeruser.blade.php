@@ -7,11 +7,9 @@
 </nav> --}}
 
 {{-- d-flex justify-content-between masih eror --}}
-<div class="soundseeker-header pt-3 pb-3" style="background-color:rgb(172, 194, 195)">
+<div class="soundseeker-header pt-3 pb-3" style="background-color:rgb(233, 220, 216)">
     <div class="container-fluid d-flex justify-content-between">
         <img src="image/logonama.png" alt="" width="25%">
-        <a href="#" class="mx-auto my-auto mt-auto mb-auto">SIGN UP</a>
-        <a href="#" class="mx-auto my-auto mt-auto mb-auto">SIGN IN</a>
         {{-- masukin profile usernya  --}}
         <a href="" class="mx-auto my-auto mt-auto mb-auto"><img src="image/iconprofile.png" alt="" width="5%"></a>
     </div>

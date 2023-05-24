@@ -12,6 +12,6 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function home(){
-        return view('layouts.mainuser');
+        return view('user.homeuser');
     }
 }

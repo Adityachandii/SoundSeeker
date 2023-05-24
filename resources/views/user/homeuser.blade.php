@@ -3,11 +3,12 @@
 
 @section('content')
     <div class="">
-        <div>
-            <h1>Advertisment</h1>
-        </div>
-        <div>
-            <img src="" alt="" srcset="" width="100%", height="550px" class="p-2">
-        </div>
+        <img src="image/iklan.jpg" alt="" srcset="" width="100%", height="550px" class="p-2">
+    </div>
+    <div>
+        <h1>Event</h1>
+    </div>
+    <div>
+        
     </div>
 @endsection
