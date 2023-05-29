@@ -18,6 +18,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [Controller::class, 'home'])->name('Homepage');
-
+Route::get('/', [EventController::class, 'showAllEvent'])->name('Homepage');
+Route::get('/eventdetailuser/{id}', [EventController::class, 'showDetailEvent'])->name('DetailEventUser');
 

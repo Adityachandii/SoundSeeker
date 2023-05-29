@@ -2,13 +2,12 @@
 @section('title', 'Homepage - User')
 
 @section('content')
-    <div class="">
-        <img src="image/iklan.jpg" alt="" srcset="" width="100%", height="550px" class="p-2">
-    </div>
-    <div>
-        <h1>Event</h1>
-    </div>
-    <div>
-        
-    </div>
+    @foreach ($allEvent as $event)
+        <a href={{route('DetailEventUser',['id'=> $event->id])}}>
+            <img src="{{asset($event->poster)}}" alt="" width="200px" height="200px"><br>
+        </a>
+        {{$event->eventname}} <br>
+        {{$event->startdate}} <br>
+        Start From Rp. {{number_format($event->singleprice)}} <br>
+    @endforeach
 @endsection

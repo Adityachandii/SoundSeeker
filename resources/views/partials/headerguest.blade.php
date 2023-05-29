@@ -11,6 +11,8 @@
     <div class="container-fluid d-flex justify-content-between">
         <img src="image/logonama.png" alt="" width="25%">
         {{-- masukin profile usernya  --}}
-        <a href="" class=""><img src="image/iconprofile.png" alt="" width="5%"></a>
+        {{-- <a href="" class="mx-auto my-auto mt-auto mb-auto"><img src="image/iconprofile.png" alt="" width="5%"></a> --}}
+        <a href=""><h3>SIGN IN</h3></a>
+        <a href=""><h3>SIGN UP</h3></a>
     </div>
 </div>
