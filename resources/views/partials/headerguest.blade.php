@@ -1,18 +1,13 @@
-{{-- <nav class="navbar navbar-expand-lg pt-3 pb-3" style="background-color:rgb(242, 242, 247)">
+<div class="soundseeker-header pt-2 pb-2" style="background-color:#D9D9D9">
     <div class="container-fluid d-flex justify-content-between">
-        <a class="navbar-brand text-dark" href="#">Good Morning, <br> Ms. Fei Fei Li</a>
-        disini buat nama yang log in
-        <div class="navbar-lever", style="color: #006f42">Green Level</div>
-    </div>
-</nav> --}}
-
-{{-- d-flex justify-content-between masih eror --}}
-<div class="soundseeker-header pt-3 pb-3" style="background-color:rgb(233, 220, 216)">
-    <div class="container-fluid d-flex justify-content-between">
-        <img src="image/logonama.png" alt="" width="25%">
-        {{-- masukin profile usernya  --}}
-        {{-- <a href="" class="mx-auto my-auto mt-auto mb-auto"><img src="image/iconprofile.png" alt="" width="5%"></a> --}}
-        <a href=""><h3>SIGN IN</h3></a>
-        <a href=""><h3>SIGN UP</h3></a>
+        <div class="">
+            <img src="image/logonama.png" alt="" width="25%">
+        </div>
+        <div class="d-flex justify-content-end ms-auto">
+            <div class="mx-2 my-2"><a class="text-decoration-none text-dark" href={{route('LoginAccount')}}><h4><i class="bi bi-box-arrow-in-right"></i>SIGN IN</h4></a></div>
+            <div class="mx-2 my-2">
+                <a class="text-decoration-none text-dark" href={{route('RegisterAccount')}}><h4><i class="bi bi-box-arrow-in-down"></i>SIGN UP</h4></a>
+            </div>
+        </div>
     </div>
 </div>

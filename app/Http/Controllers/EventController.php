@@ -13,6 +13,11 @@ class EventController extends Controller
         return view('user.homeuser', compact('allEvent'));
     }
 
+    public function showAllEventGuest(){
+        $allEventGuest = Event::All();
+        return view('guest.homeguest', compact('allEventGuest'));
+    }
+
     //Event << khusus user
     public function showDetailEvent($id){
         $detailEvent = Event::where('id', '=', $id)->first();

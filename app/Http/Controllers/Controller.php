@@ -18,4 +18,8 @@ class Controller extends BaseController
     // public function homeguest(){
     //     return view('user.homeguest');
     // }
+
+    public function register(){
+        return view('register.register');
+    }
 }
