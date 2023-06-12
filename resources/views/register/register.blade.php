@@ -2,7 +2,7 @@
 @section('title', 'Register Your Account')
 
 @section('content')
-<div style="height: 804px; background-color: rgb(255, 250, 224);">
+<div style="height: 804px; background-color: rgb(255, 255, 255);">
     <form action={{route('AddAccount')}} method="POST">
     @csrf
         <section class="h-100">

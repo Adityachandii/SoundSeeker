@@ -2,7 +2,7 @@
 
 
 @section('content')
-<section class="d-flex align-items-center" style="background-color: rgb(255, 250, 224); height: 804px;">
+<section class="d-flex align-items-center" style="background-color: rgb(255, 255, 255); height: 600px;">
     <div class="container py-5 p-5">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">

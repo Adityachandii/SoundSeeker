@@ -4,7 +4,7 @@
 @section('content')
     <div class="d-flex justify-content-center mt-3 mb-3">
         <div class="mx-5 my-5">
-            <img src="{{asset($detailEvent->poster)}}" alt="" width="400px" height="500px"> <br>
+            <img src="{{asset($detailEvent->poster)}}" alt="" width="400px" height="500px" class="rounded"> <br>
         </div>
         <div class="mx-5 my-5">
             <div class="text-center ">
@@ -34,14 +34,14 @@
                     <h2>Rp. {{number_format($detailEvent->singleprice)}}</h2> <br>
                 </div>
             </div>
-            <div class="d-flex justify-content-between">
+            {{-- <div class="d-flex justify-content-between">
                 <div class="">
                     <h2>All Day Pass</h2>
                 </div>
                 <div class="mx-5">
                     <h2>Rp. {{number_format($detailEvent->alldayprice)}}</h2> <br>
                 </div>
-            </div>
+            </div> --}}
             <div class="d-flex justify-content-between">
                 <div class="">
                     <h2>About</h2>

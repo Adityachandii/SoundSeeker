@@ -14,7 +14,7 @@
                 <img src="{{asset($event->poster)}}" alt="" width="200px" height="200px"><br>
                 <h5>{{$event->eventname}}</h5>
                 {{$event->startdate}} <br>
-                Start From Rp. {{number_format($event->singleprice)}} <br>
+                Rp. {{number_format($event->singleprice)}} <br>
             </div>
         @endforeach
     </div>

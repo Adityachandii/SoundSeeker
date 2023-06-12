@@ -3,19 +3,29 @@
 
 @section('content')
     @foreach ($transaction as $item)
-        {{ $item->transaction_date }}<br>
-        {{ $item->eventname }}<br>
-        {{ $item->singleprice }}<br>
-
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-            Payment
-        </button>
-        <form action={{ route('DeleteItem', ['id' => $item->transaction_id]) }} method="POST">
-            @method('delete')
-            @csrf
-            <button class="btn btn-delete">Delete</button>
-        </form>
+        <div class="d-flex justify-content-between align-items-center mt-3 mx-5 my-3 p-3 rounded" style="border: 3px solid black">
+            {{-- <h6>{{ $item->transaction_date }}</h6> --}}
+            <img src="{{asset($item->poster)}}" alt="" width="200px" height="200px" class="rounded">
+            <div class="">
+                <h1>{{ $item->eventname }}</h1><br>
+                <div class="">
+                    <h6>Tannggal Event : {{ $item->startdate }}</h6> <br>
+                </div>
+            </div>
+            <div class="">
+                <h1>Rp. {{ number_format($item->singleprice) }}</h1><br>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
+                    Payment
+                </button>
+            </div>
+            <form action={{ route('DeleteItem', ['id' => $item->transaction_id]) }} method="POST">
+                @method('delete')
+                @csrf
+                <button class="btn btn-delete">Delete</button>
+            </form>
+        </div>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -29,19 +39,21 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                       Total Pembayaran: Rp. {{number_format($item->singleprice)}}
-                        <form method="POST" action="/proses-form">
-                            @csrf
-                            <input type="radio" id="gopay" name="pembayaran" value="gopay" checked>
-                            <label for="gopay">Gopay</label>
+                       Total Pembayaran: Rp. {{number_format($item->singleprice)}} <br>
+                       Metode Pembayaran:
+                       <div class="row">
+                           <form method="POST" action="/proses-form">
+                               @csrf
+                               <input type="radio" id="gopay" name="pembayaran" value="gopay" class="mx-2" checked>
+                               <label for="gopay"> GOPAY</label>
 
-                            <input type="radio" id="ovo" name="pembayaran" value="ovo" checked>
-                            <label for="ovo">Ovo</label>
+                               <input type="radio" id="ovo" name="pembayaran" value="ovo" class="mx-2" checked>
+                               <label for="ovo"> OVO</label>
 
-                            <input type="radio" id="BCA" name="pembayaran" value="BCA" checked>
-                            <label for="BCA">BCA</label>
-
-                        </form>
+                               <input type="radio" id="BCA" name="pembayaran" value="BCA" class="mx-2" checked>
+                               <label for="BCA"> BCA</label>
+                           </form>
+                       </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

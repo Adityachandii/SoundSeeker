@@ -24,7 +24,7 @@ class TransactionController extends Controller
     public function showAllTransaction(){
         $transaction = DB::table('transactions')
         ->join('events', 'events.id', '=', 'transactions.event_id')
-        ->select('transactions.id as transaction_id', 'transactions.transaction_date', 'events.eventname', 'events.singleprice')
+        ->select('transactions.id as transaction_id', 'transactions.transaction_date', 'events.eventname', 'events.singleprice', 'events.poster', 'events.startdate')
         ->get();
         return view('transaction.transaction', compact('transaction'));
     }
