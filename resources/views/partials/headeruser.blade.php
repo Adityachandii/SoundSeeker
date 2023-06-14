@@ -5,7 +5,7 @@
         </a>
     </div>
     <div class="mx-3"> <!-- Menambahkan kelas "mx-3" untuk memberikan jarak horizontal -->
-        <a href="{{ route('transactionHistory') }}" class="navbar-brand text-dark">CART</a>
+        <a href="{{ route('transactionHistory') }}" class="navbar-brand text-dark"><i class="bi bi-cart"></i></a>
     </div>
 
     <div class="nav-item dropdown">

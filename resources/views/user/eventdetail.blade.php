@@ -12,7 +12,7 @@
             </div>
             <div class="d-flex justify-content-between">
                 <div class="">
-                    <h2>Start Date</h2>
+                    <h2><i class="bi bi-calendar2-check-fill"></i></h2>
                 </div>
                 <div class="mx-5">
                     <h2>{{$detailEvent->startdate}}</h2> <br>
@@ -20,7 +20,7 @@
             </div>
             <div class="d-flex justify-content-between">
                 <div class="">
-                    <h2>End Date</h2>
+                    <h2><i class="bi bi-calendar-x-fill"></i></h2>
                 </div>
                 <div class="mx-5">
                     <h2>{{$detailEvent->enddate}}</h2> <br>
@@ -28,23 +28,15 @@
             </div>
             <div class="d-flex justify-content-between">
                 <div class="">
-                    <h2>Single Pass</h2>
+                    <h2><i class="bi bi-currency-exchange"></i></h2>
                 </div>
                 <div class="mx-5">
                     <h2>Rp. {{number_format($detailEvent->singleprice)}}</h2> <br>
                 </div>
             </div>
-            {{-- <div class="d-flex justify-content-between">
-                <div class="">
-                    <h2>All Day Pass</h2>
-                </div>
-                <div class="mx-5">
-                    <h2>Rp. {{number_format($detailEvent->alldayprice)}}</h2> <br>
-                </div>
-            </div> --}}
             <div class="d-flex justify-content-between">
                 <div class="">
-                    <h2>About</h2>
+                    <h2><i class="bi bi-info-circle-fill"></i></h2>
                 </div>
                 <div class="mx-5 mt-1">
                     <h4>{{$detailEvent->description}}</h4> <br>
