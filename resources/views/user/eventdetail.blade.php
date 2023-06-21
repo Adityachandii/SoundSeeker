@@ -15,7 +15,8 @@
                     <h2><i class="bi bi-calendar2-check-fill"></i></h2>
                 </div>
                 <div class="mx-5">
-                    <h2>{{$detailEvent->startdate}}</h2> <br>
+                    <h2>{{\Carbon\Carbon::parse($detailEvent->startdate)->format('d F Y')}}</h2> <br>
+                    {{-- <h2>{{$detailEvent->startdate}}</h2> <br> --}}
                 </div>
             </div>
             <div class="d-flex justify-content-between">
@@ -23,7 +24,8 @@
                     <h2><i class="bi bi-calendar-x-fill"></i></h2>
                 </div>
                 <div class="mx-5">
-                    <h2>{{$detailEvent->enddate}}</h2> <br>
+                    <h2>{{\Carbon\Carbon::parse($detailEvent->enddate)->format('d F Y')}} </h2> <br>
+                    {{-- <h2>{{$detailEvent->enddate}}</h2> <br> --}}
                 </div>
             </div>
             <div class="d-flex justify-content-between">

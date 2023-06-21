@@ -5,21 +5,24 @@
     <div class="d-flex justify-content-center mt-3">
         <img src="image/iklan.png" alt="" width="80%" height="30%" >
     </div>
-    <div class="mx-5 mb-3">
-        <H3>EVENT</H3>
+    <div class="mx-5">
+        <H4>EVENT</H4>
     </div>
     <div class="d-flex justify-content-between align-items-center">
         @foreach ($allEvent as $event)
-            <div class="text-center mt-3 mx-5 my-3 p-5 rounded" style="border: 3px solid black; background-color: #F3F3F3">
+            <div class="card text-center mx-5 my-5 rounded"; style="background-color: #C2DEDC">
                 <a href={{route('DetailEventUser',['id'=> $event->id])}}>
-                    <img src="{{asset($event->poster)}}" alt="" width="200px" height="200px" class="rounded"><br>
+                    <img src="{{asset($event->poster)}}" alt="" width="300px" height="300px"><br>
                 </a>
-                <h5>{{$event->eventname}}</h5>
-                {{$event->startdate}} s/d {{$event->enddate}} <br>
-                <div class="dropdown-divider bg-black"></div>
-                <h3>
-                    Rp. {{number_format($event->singleprice)}} <br>
-                </h3>
+                <div class="blockquote p-1">
+                    <h4>{{$event->eventname}}</h4>
+                    {{-- {{$event->startdate}} s/d {{$event->enddate}} <br> --}}
+                    {{\Carbon\Carbon::parse($event->startdate)->format('d F Y')}} <br> s/d <br>{{\Carbon\Carbon::parse($event->enddate)->format('d F Y')}} <br>
+                    <div class="dropdown-divider bg-black"></div>
+                    <h3>
+                        Rp. {{number_format($event->singleprice)}} <br>
+                    </h3>
+                </div>
             </div>
         @endforeach
     </div>

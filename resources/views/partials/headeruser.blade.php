@@ -1,4 +1,4 @@
-<div class="soundseeker-header pt-2 pb-2 d-flex" style="background-color:#D9D9D9">
+<div class="soundseeker-header pt-2 pb-2 d-flex" style="background-color:#AED9E0">
     <div class="mx-3 mr-auto"> <!-- Menambahkan kelas "mr-auto" untuk mendorong elemen ke kanan -->
         <a href="{{ route('HomepageUser') }}">
             <img src="image/logonama.png" alt="" width="25%">

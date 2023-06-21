@@ -1,4 +1,4 @@
-<div class="soundseeker-header pt-2 pb-2" style="background-color:#D9D9D9">
+<div class="soundseeker-header pt-2 pb-2" style="background-color:#AED9E0">
     <div class="container-fluid d-flex justify-content-between">
         <div class="">
             <a href="{{ route('HomepageGuest') }}"><img src="image/logonama.png" alt="" width="25%"></a>

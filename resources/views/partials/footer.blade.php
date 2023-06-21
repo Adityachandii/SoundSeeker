@@ -1,5 +1,5 @@
 <footer class="bg-primary text-center text-lg-start mt-auto">
-    <div class="text-center p-3 text-dark" style="background-color: #D9D9D9;">
+    <div class="text-center p-3 text-dark" style="background-color: #AED9E0;">
         © 2022 Copyright: Webprog LA06 Aditya Annisa Catherine
         <div class="medsos mt-1">
             <div class="row">

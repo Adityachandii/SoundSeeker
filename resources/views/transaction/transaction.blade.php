@@ -9,7 +9,7 @@
             <div class="">
                 <h1>{{ $item->eventname }}</h1><br>
                 <div class="">
-                    <h6>Tannggal Event : {{ $item->startdate }}</h6> <br>
+                    <h6>Tanggal Event : {{ $item->startdate }}</h6> <br>
                 </div>
             </div>
             <div class="">
@@ -39,7 +39,10 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                       Total Pembayaran: Rp. {{number_format($item->singleprice)}} <br>
+                       Biaya Event : Rp. {{number_format($item->singleprice)}} <br>
+                       Pajak 10% : Rp. {{number_format($item->singleprice*0.1)}} <br> <br>
+                       <h3>Total Pembayaran: Rp. {{ number_format($item->singleprice + ($item->singleprice * 0.1)) }} </h3> <br>
+                       <div class="dropdown-divider"></div>
                        Metode Pembayaran:
                        <div class="row">
                            <form method="POST" action="/proses-form">
